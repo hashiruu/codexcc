@@ -38,17 +38,17 @@ codexcc: 给项目加完整的错误处理和日志系统
 
 ## 工作流
 
-```
-用户任务
-    │
-    ▼
-/codex:rescue   ← Codex 分析拆解（脑）
-    │
-    ▼
-Workflow 多 agent 并行执行（手）
-    │
-    ▼
-/codex:review   ← Codex 验收（眼）
+```mermaid
+flowchart TD
+    A["👤 用户任务"] --> B["🧠 /codex:rescue<br/>Codex 分析拆解"]
+    B --> C{"用户确认拆解方案?"}
+    C -->|是| D["🤝 Workflow 多 Agent<br/>并行执行"]
+    C -->|否，需调整| B
+    D --> E["👁️ /codex:review<br/>Codex 验收"]
+    E --> F{"有 CRITICAL 问题?"}
+    F -->|是| G["路由问题给 Agent 修复"]
+    G --> E
+    F -->|否| H["✅ 完成"]
 ```
 
 ## 守则
