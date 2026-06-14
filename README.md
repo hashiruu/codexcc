@@ -1,5 +1,9 @@
 # CodexCC
 
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
+[![Claude Code Skill](https://img.shields.io/badge/claude--code-skill-d97706)](https://claude.ai/code)
+[![Requires Codex Plugin](https://img.shields.io/badge/requires-codex--plugin--cc-000000)](https://github.com/openai/codex-plugin-cc)
+
 **Codex 当脑，Claude Code 当手。** 一个 Claude Code Skill，实现「Codex 拆解 → 多 Agent 并行执行 → Codex 验收」三步闭环。
 
 ## 前置条件
